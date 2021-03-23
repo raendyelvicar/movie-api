@@ -39,17 +39,6 @@ const Header = (props) => {
 						/>
 					</form>
 				</header>
-				<Switch>
-					<Route path="/popular">
-						<App />
-					</Route>
-					<Route path="/bookmark">
-						<Bookmarks />
-					</Route>
-					<Route path="/recent-likes">
-						<Likes />
-					</Route>
-				</Switch>
 			</Router>
 		</>
 	);
