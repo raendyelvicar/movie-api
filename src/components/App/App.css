@@ -1,0 +1,88 @@
+.App {
+	background-color: rgb(16, 16, 16);
+	color: #fff;
+	min-height: 100vh;
+}
+
+header {
+	background-color: rgb(12, 12, 12);
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30px;
+	align-items: center;
+}
+
+header ul {
+	display: flex;
+	width: 100%;
+}
+
+header ul li {
+	list-style: none;
+	margin-right: 30px;
+}
+
+header ul li a {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+header ul li:hover a {
+	color: rgb(201, 201, 201);
+}
+
+.movie-section {
+	padding: 50px;
+}
+
+.title-text {
+	font-size: 32px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.title-text h2::after {
+	content: "";
+	z-index: 1;
+	bottom: 50%;
+	margin-bottom: -2px;
+	height: 2px;
+	left: 0;
+	right: 0;
+	background: white;
+}
+
+.movie-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.search-bar:focus {
+	border-color: rgb(55, 55, 55);
+	margin: 30px 50px;
+}
+
+.search-bar {
+	border: 1px rgb(16, 16, 16) solid;
+	outline: none;
+	background-color: #222;
+	height: 40px;
+	width: 300px;
+	border-radius: 50px;
+	padding: 12px 20px;
+	margin: 30px 50px;
+	font-family: "Roboto", sans-serif;
+	color: white;
+	font-size: 16px;
+}
+
+.search-bar::placeholder {
+	font-size: 16px;
+}
