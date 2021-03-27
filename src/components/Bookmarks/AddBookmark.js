@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./BookmarkComp.css";
 
 const AddBookmark = (props) => {
 	return (
 		<>
-			<div className="btn-container" onClick={props.clickEvent}>
-				<a className="btn bookmark-btn">+ Add</a>
+			<div className="btn-container">
+				<a className="btn bookmark-btn" onClick={props.clickEvent}>
+					+ Add
+				</a>
 			</div>
 		</>
 	);

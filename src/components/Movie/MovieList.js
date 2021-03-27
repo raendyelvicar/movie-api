@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import { FaPlayCircle } from "react-icons/fa";
-import AddBookmark from "../Bookmarks/AddBookmark";
+import AddLikes from "../Likes/AddLikes";
 import "./MovieList.css";
 
 const IMAGE_API_URL = "https://image.tmdb.org/t/p/w300";
 
 const MovieList = (props) => {
 	const FavouriteComponent = props.favouriteComponent;
-	const [disable, setDisable] = useState(false);
 
 	const clickBookmark = (movie) => {
 		props.handleBookmarkClick(movie);
 	};
 
+	const clickLike = (movie) => {
+		props.handleLikeClick(movie);
+	};
+
 	return (
 		<>
 			<div className="movie-container">
-				{props.movies.length > 0 &&
+				{props.movies &&
 					props.movies.map((movie) => (
 						<div className="movie" key={movie.id}>
 							<div className="hover-img">
@@ -35,6 +38,7 @@ const MovieList = (props) => {
 							<img src={IMAGE_API_URL + movie.poster_path} alt={movie.title} />
 							<div className="movie-info">
 								<p className="movie-title">{movie.title}</p>
+								<AddLikes />
 							</div>
 						</div>
 					))}

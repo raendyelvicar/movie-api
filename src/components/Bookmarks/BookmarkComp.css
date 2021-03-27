@@ -1,6 +1,6 @@
 .btn-container {
 	display: flex;
-	z-index: 100;
+	z-index: 1;
 	position: absolute;
 	height: 300px;
 	width: 200px;
@@ -24,6 +24,7 @@
 	width: 80px;
 	text-align: center;
 	font-size: 14px;
+	z-index: 1;
 }
 
 .btn:hover {
